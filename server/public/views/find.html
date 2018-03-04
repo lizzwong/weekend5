@@ -13,3 +13,21 @@
 <input type="text" ng-model="specificSearch" placeholder="Search">
 
 <button ng-click="fc.find(category, specificSearch)">Search your Feelings</button>
+
+<div>
+    <table>
+        <thread>
+            <th>Item Name</th>
+            <th>More Information</th>
+            <th></th>
+        </thread>
+        <tbody>
+            <tr ng-repeat="item in fc.findResults.list">
+                <td>{{item.name}}</td>
+                <td><a href="{{item.url}}">{{item.url}}</a></td>
+                <td><button ng-click="fc.favorite(item)">Favorite</button></td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>

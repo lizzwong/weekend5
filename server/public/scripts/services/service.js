@@ -1,7 +1,7 @@
 app.service('SwapiService', ['$http', function($http){
     let self = this;
 
-    self.findResults = {results: []};
+    self.findResults = {list: []};
     self.favorites = {list: []};
 
     self.find = function (category, specificSearch){
@@ -36,5 +36,33 @@ app.service('SwapiService', ['$http', function($http){
         })
     }
 
-    
+    self.getFavorites = function (){
+        $http({
+            method: 'GET',
+            url: `/favorites`,
+        })
+        .then(function (response) {
+            self.favorites.list = response.data;
+            console.log(self.favorites.list);
+        })
+        .catch(function (error) {
+            console.log('Error on favorites:', error);
+
+        })
+    }
+
+    self.deleteFavorite = function (item){
+        $http({
+            method: 'DELETE',
+            url: `/favorites/${item._id}`,
+        })
+        .then(function(response){
+            console.log('Item Deleted', response);
+            self.getFavorites();
+        })
+        .catch(function(error){
+            console.log('Error on Delete', error);
+            
+        })
+    }
 }])

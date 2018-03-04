@@ -1,0 +1,24 @@
+<h3>"I don't like sand. It's coarse and rough and irritating and it gets everywhere. <br>
+    Not like here. Here everything is soft and smooth."</h3>
+
+
+<div>
+    <table>
+        <thread>
+            <th>Favorite Name</th>
+            <th>More Information</th>
+            <th></th>
+        </thread>
+        <tbody>
+            <tr ng-repeat="item in vm.favorites.list" ng-cloak>
+                <td>{{item.name}}</td>
+                <td>
+                    <a href="{{item.url}}">{{item.url}}</a>
+                </td>
+                <td>
+                    <button ng-click="vm.deleteFavorite(item)">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

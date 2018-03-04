@@ -19,7 +19,7 @@ router.get('/', (request,response) =>{
            response.sendStatus(500); 
         }
         else {
-            console.log('Favorites found');
+            console.log('Favorites found',foundFavorites);
             response.send(foundFavorites);
         }
     })
@@ -40,12 +40,12 @@ router.post('/', (request, response) => {
     })
 });
 
-router.delete('/delete/:id', (request, response)=>{
+router.delete('/:id', (request, response)=>{
     let id = request.params.id;
-    console.log('Favorite to delete is', resquest.body);
-    Facorite.findByIdAndRemove(
+    console.log('Favorite to delete is', request.body);
+    Favorite.findByIdAndRemove(
         {"_id":id},
-        (error, deleteEmployee) =>{
+        (error, deleteFavorite) =>{
             if (error){
                 console.log('Error on delete Favorite',error);
                 response.sendStatus(500);  
