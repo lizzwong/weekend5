@@ -1,0 +1,15 @@
+<h2>Are these the droids you're looking for?</h2>
+
+<select ng-model="category">
+    <option></option>
+    <option value="films">Films</option>
+    <option value="people">People</option>
+    <option value="planets">Planets</option>
+    <option value="spaceships">Spaceships</option>
+    <option value="species">Species</option>
+    <option value="vehicles">Vehicles</option>
+</select>
+
+<input type="text" ng-model="specificSearch" placeholder="Search">
+
+<button ng-click="fc.find(category, specificSearch)">Search your Feelings</button>
