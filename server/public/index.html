@@ -6,6 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="vendors/angular.js"></script>
     <script src="vendors/angular-route.js"></script>
+    <link href="vendors/angular-material.css" rel="stylesheet" type="text/css">
+    <script src="vendors/angular-animate.js" charset="utf-8"></script>
+    <script src="vendors/angular-aria.js" charset="utf-8"></script>
+    <script src="vendors/angular-messages.js" charset="utf-8"></script>
+    <script src="vendors/angular-material.js" charset="utf-8"></script>
     <script src="scripts/client.js"></script>
     <script></script>
     <title>Star Wars</title>
@@ -13,10 +18,10 @@
 <body>
     <div>
        <h1>May The Force Be With You</h1>
-       <nav>
-           <button ng-href="/#!find">Are these the droids?</button>
-           <button ng-href="/#!favorites">Not Sand</button>
-       </nav>
+    <nav>
+        <button ng-href="/#!find">Find Droids</button>
+        <button ng-href="/#!favorites">Not Sand</button>
+    </nav>
     </div>
     <div ng-view>
 
