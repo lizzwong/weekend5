@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="vendors/angular.js"></script>
+    <script src="vendors/angular-route.js"></script>
+    <script src="scripts/client.js"></script>
+    <title>Star Wars</title>
+</head>
+<body>
+    <div>
+       <h1>May The Force Be With You</h1>
+       <nav>
+           <button ng-href="/#!find">Are these the droids?</button>
+           <button ng-href="/#!favorites">Not Sand</button>
+       </nav>
+    </div>
+    <div ng-view>
+
+    </div>
+</body>
+</html>
