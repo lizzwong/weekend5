@@ -1,11 +1,19 @@
 body {
 margin: 20px;
-background-image:url("http://3.bp.blogspot.com/-FQjmw118biM/Uhvrw2zFalI/AAAAAAAAOvc/wpjxD7CS0oE/s1600/tatooine-concept-mcquarrie.jpg")
+background-image: url("https://travelwithstanito.files.wordpress.com/2014/06/arriving-to-tatooine-stanito1.jpg");
+background-size: 1400px;
 }
 
 table {
     border: 1px;
     border-style: outset;
     border-color: bisque;
-    
+    border-radius: 2px;
+    font-weight: 440;
+}
+
+button{
+    border-radius: 3px;
+    background: inherit;
+    font-weight: 450;
 }
